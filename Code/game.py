@@ -1,9 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+    import pygame
+    class GAME:
+        def __init__(self):
+            self.window = None
 
-class GAME:
-    def __init__(self):
-        self.window surface = None
+        def run(self, ):
+            pygame.init()
+            window = pygame.display.set_mode((600, 480))
+            print('setup end')
 
-    def run(self, ):
-        pass
+            print('loop start')
+            while True:
+            #check for aall events
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        print('end progrma')
+                        pygame.quit() #close window
+                        sys.exit()
